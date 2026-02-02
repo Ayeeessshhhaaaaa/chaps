@@ -770,6 +770,7 @@ function handleYesClick() {
     createEpicCelebration();
 }
 
+
 function createEpicCelebration() {
     const fireworksContainer = document.querySelector('.fireworks');
     const dancingRobotsContainer = document.getElementById('dancing-robots-container');
