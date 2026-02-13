@@ -333,7 +333,7 @@ function startLevel2() {
     }
 
     setTimeout(() => {
-        robotSpeech.textContent = `My love, click: ${puzzleIcons[puzzleSequence[0]]}`;
+        robotSpeech.textContent = `Monkey, click: ${puzzleIcons[puzzleSequence[0]]}`;
     }, 2000);
 }
 
