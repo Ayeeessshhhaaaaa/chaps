@@ -35,15 +35,19 @@ let teasingInterval;
 let obstacles = [];
 
 const teasingMessages = [
-    "Careful, Chappi… fast cars turn me on 😏",
-    "Eyes on the road, but your mind is on me… I can tell 👀",
-    "That M4 isn’t the only thing running hot tonight 🔥",
-    "Drive like you want me, baby 🏎️💋",
-    "Smooth steering… just like your hands 😉",
-    "Drift harder, Chappi… I like it risky 😈",
-    "Vroom vroom… taking you straight to me 💕",
-    "If you crash, I’ll kiss it better, my love 😘"
+    "Relax, Speed Racer. It’s just a car.",
+    "You revving the engine like I’m not watching.",
+    "Drive calm. You’re not in Fast & Furious 12.",
+    "You gripping that wheel like it owes you money.",
+    "Careful… ego accelerating faster than the car.",
+    "Oh you drifting? Congratulations.",
+    "Car going 200 but you still stuck on me.",
+    "You flexing horsepower like I’m not the real upgrade.",
+    "Vroom vroom. Very intimidating.",
+    "That engine growl cute. Not as cute as you trying.",
+    "You racing but we both know who’s winning."
 ];
+
 
 function startLevel1() {
     gameState.raceProgress = 0;
@@ -94,7 +98,7 @@ function startLevel1() {
 
             // Show checkpoint message
             const checkpointMsg = document.getElementById('checkpoint-message');
-            checkpointMsg.textContent = "Checkpoint reached… but you're still driving straight into my heart, my baby. 💕";
+checkpointMsg.textContent = "Checkpoint reached. Look at you following instructions.";
             checkpointMsg.style.opacity = '1';
 
             setTimeout(() => {
@@ -239,7 +243,7 @@ function spawnRobotCop() {
     const obstaclesContainer = document.getElementById('obstacles');
     const cop = document.createElement('div');
     cop.className = 'robot-cop';
-    cop.innerHTML = '🤖<div class="cop-speech">Hey cutie! 😘</div>';
+    cop.innerHTML = '🤖<div class="cop-speech">Hey Monkey! 😘</div>';
 
     const randomPos = Math.random() * 80 + 10;
     cop.style.left = randomPos + '%';
@@ -265,17 +269,36 @@ let playerSequence = [];
 const puzzleIcons = ['🔧', '⚡', '🔌', '💻', '🤖', '⚙️', '🔋', '💡', '🎮'];
 
 const riddles = [
-    { question: "What runs faster than your M4?", answer: "Ayesha falling for you 💗" },
-    { question: "What's the password to my heart?", answer: "Shafwan nana" },
-    { question: "What processes love faster than any CPU?", answer: "My heart when I see you" }
+    { 
+        question: "What runs faster than your M4?", 
+        answer: "My patience when you act clueless." 
+    },
+    { 
+        question: "What's the real system password?", 
+        answer: "Accept your fate." 
+    },
+    { 
+        question: "What processes decisions faster than any CPU?", 
+        answer: "Me deciding you're not escaping." 
+    },
+    { 
+        question: "What has more control than your steering wheel?", 
+        answer: "Me in this situation." 
+    },
+    { 
+        question: "What crashes harder than bad WiFi?", 
+        answer: "Your attempt to press NO." 
+    }
 ];
 
+
 const errorMessages = [
-    "Error 404: Too much rizz detected, try again, shafwan nana. 😅",
-    "System overload: Cuteness level exceeds maximum 🥺",
-    "Oops! Even tech geniuses make mistakes, my chungi 💙",
-    "Wrong circuit, baby! But you're still right for me 💕"
+    "Incorrect. But I respect the confidence.",
+    "That answer was creative. Not correct. But creative.",
+    "System says no. I say try again.",
+    "Close. Not really. But close in spirit."
 ];
+
 
 function startLevel2() {
     gameState.puzzleConnections = 0;
@@ -327,7 +350,7 @@ function handleNodeClick(index, node) {
         if (playerSequence.length < puzzleSequence.length) {
             robotSpeech.textContent = `Yess Chappi! Now click: ${puzzleIcons[puzzleSequence[playerSequence.length]]}`;
         } else {
-            robotSpeech.textContent = '💕 Perfect, my baby! Love circuit activated! 💕';
+robotSpeech.textContent = "Okayyy. Look at you getting it right.";
             setTimeout(() => {
                 showScreen('level3');
                 startLevel3();
@@ -348,14 +371,14 @@ let miniRobotInterval;
 let fallingHearts = [];
 
 const flirtyPopups = [
-    "+1 Heart… just like you stole mine, thief 😏",
-    "Caught another one… you’re addicted to me, aren’t you? 😉",
-    "Good hands, baby… I like that 💋",
-    "Smooth catch… smooth like you in my DMs 😈",
-    "That’s my man… heart collector 🔥",
-    "You’re getting closer to me… feel it? 💕",
-    "Don’t stop now, I’m watching 😏",
-    "You’re so good at grabbing hearts… and other things 😈"
+    "+1 Heart. Bro is locked in.",
+    "Oh you locked in locked in.",
+    "You sweating or is that focus?",
+    "Why are you actually good at this?",
+    "Plot twist: you’re trying.",
+    "Okay main character.",
+    "You doing all this just to press YES later.",
+    "This is getting competitive."
 ];
 
 
@@ -542,20 +565,28 @@ let loveNoteInterval;
 let aiGlitchInterval;
 
 const loveNotes = [
-    "Almost there, my love… keep driving to me 💕",
-    "This highway leads straight to us, Chappi",
-    "Every mile brings you closer to my heart 🏎️💗",
-    "You're doing amazing, shafwan nana! 💫",
-    "Can't wait to see you at the end, my baby 💕"
+    "Almost there. Don’t fumble now.",
+    "This route? Yeah… it was calculated.",
+    "Every mile and you’re still on my level.",
+    "You’re doing decent. I’m surprised.",
+    "End of the road? That’s where I’m waiting.",
+    "Stay focused. Don’t get distracted.",
+    "You’re closer than you think.",
+    "Plot progressing exactly as planned."
 ];
 
+
 const aiGlitches = [
-    "System.out.println('Chappi is cute');",
-    "if (Shafwan) { Ayesha.love = true; }",
-    "ERROR: Too handsome to process 😍",
-    "while(true) { thinkAboutChappi(); }",
-    "const love = Chappi + Ayesha; // = ∞"
+    "System.override('free_will');",
+    "if (choice === 'NO') { redirectTo('YES'); }",
+    "ERROR: Delusion detected.",
+    "while(true) { destiny++; }",
+    "Access denied. Resistance is pointless.",
+    "console.log('He really thought he had options');",
+    "AI prediction accuracy: 100% (YES incoming)",
+    "Fatal Error: Wrong answer energy detected."
 ];
+
 
 function startLevel4() {
     gameState.glitchProgress = 0;
@@ -659,19 +690,21 @@ function spawnAIGlitch() {
 
 // ===== LEVEL 5: FINAL BOSS - AYESHA'S HEART SYSTEM (UPGRADED) =====
 const noMessages = [
-    "Hmm… are you sure, Chappi? 🥺",
-    "Try again, my love… I don’t accept that 😈",
-    "Nice try, baby… but NO isn’t an option 💗",
-    "Click YES, cutie… I’m watching you 😏",
-    "Careful… you’re teasing me now 😈💕",
-    "You like playing hard to get, don’t you? 😉",
-    "I can be very persuasive, my love… click YES 🔥",
-    "Last warning before I steal your heart completely 💋",
-    "Okay fine… keep saying no… I’ll just make you say yes 😈",
-    "You and me… Valentine… say it with me: YES 💕",
-    "Every NO just makes me want you more… risky move, Chappi 😏",
-    "You’re testing me… I like it… but still click YES 😈",
-    "One more NO and I’m multiplying the YES button 💗"
+    "Bro really clicked NO? Bold of you.",
+    "You thought that button does something? 😭",
+    "That was cute. Try again.",
+    "NO? Delusion detected.",
+    "Be serious.",
+    "You testing me? I like that energy.",
+    "Wrong answer. System correcting...",
+    "You really think you have options?",
+    "You pressing NO like it’s doing something 💀",
+    "This is embarrassing for you.",
+    "You want attention? Just say that.",
+    "The audacity is crazy.",
+    "You clicking NO but still here.",
+    "Stop playing and press YES.",
+    "I admire the confidence. It’s misplaced though."
 ];
 
 function startLevel5() {
